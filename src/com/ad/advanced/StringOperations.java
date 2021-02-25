@@ -4,7 +4,7 @@ public class StringOperations {
 
 	public String concatString(String str1, String str2) {
 		if(str1 == null || str2 == null)
-			throw new NullPointerException();
+			throw new NullPointerException("String concatenation not possible with null String");
 		
 		return str1 + str2;
 	}

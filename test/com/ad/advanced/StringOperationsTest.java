@@ -26,7 +26,8 @@ class StringOperationsTest {
 
     @Test()
     public void concatString_ShouldThrowNullPointerException_WhenInputIsNull() {
-        Assertions.assertThrows(NullPointerException.class, ()-> stringOperations.concatString("asdasd", null));
+        Exception ex = Assertions.assertThrows(NullPointerException.class, () -> stringOperations.concatString("asdasd", null));
+        Assertions.assertTrue("String concatenation not possible with null String".equals(ex.getMessage()));
     }
 
 
